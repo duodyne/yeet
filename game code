@@ -1,0 +1,46 @@
+Let's make a game!
+	name:Flower Clicker
+	by:Duodyne
+	desc:
+	created:23/1/2019
+	updated:
+	version:1.0
+
+Settings
+	background:
+	building cost increase:115%
+	building cost refund:55%
+	spritesheet:icons, 48 by 48
+	stylesheet:stuff/bigBlue.css
+
+Layout
+	use default
+		
+Buttons
+	*flowerButton
+		name:Grow a flower!
+		desc:Click this flower to grow more flowers!
+		on click:anim icon wobble
+		on click:yield 1 flower
+		icon:stuff/flower.png
+		no text
+		class:bigButton hasFlares
+		icon class:shadowed
+		tooltip origin:bottom
+		tooltip class:red
+		
+Resources
+	*flower|flowers
+		name:Flower|Flowers
+		desc:These are your flowers, you can grow more to spend or to collect!
+		icon:icons[0,0]
+		class:noBackground
+		show earned
+		
+	*goldenFlower|goldenFlowers
+		name:Golden flower|Golden flowers
+		desc:These flowers are just like normal flowers, but golden and much, much rarer!
+		icon:icons[0,1]
+		class:noBackground
+		hidden when 0
+		
